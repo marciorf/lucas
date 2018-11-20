@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CADASTRO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('login')}}">Logar <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link    " href="{{url_for('cadastrados')}}">Cadastrados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{url_for('index')}}">Cadastrar</a>
+            </li> 
+          </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron">
+        <form method="POST" action="{{url_for('index')}}">
+        <h1 class="display-3">Cadastro de usuários</h1>
+        <p class="lead">  Cadastre-se aqui</p>
+        <p>Usuario</p>
+        <input type="text" name="username"></br></br>
+        <p>Senha</p>
+        <input type="password" name="password"> </br> </br>
+        <button type="submit" class="btn btn-default">save</button> 
+        </form>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Company 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    </body>
+</html>
